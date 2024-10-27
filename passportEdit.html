@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Сомалийские пираты</h1>
+        <nav>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="consequences.html">Последствия</a></li>
+            <li><a href="contact.html">Отзывы</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Somali_piracy" target="_blank">Википедия</a></li>
+            <li><a href="passport.html">Паспорт</a></li>
+            <li><a href="passportEdit.html" class="active">Паспорт2</a></li>
+            <li><a href="solve1.html">Задача 1</a></li>
+            <li><a href="solve2.html">Задача 2</a></li>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <p>ПАСПОРТ ВЫДАН: УМВД России по Ульяновской области</p>
+        <p>ДАТА ВЫДАЧИ: 20.01.2020</p>
+        <p>СЕРИЯ: 7777</p>
+        <p>НОМЕР: 666-666</p>
+        <p>ФАМИЛИЯ: <span id="surname">Касымов</span></p>
+        <p>ИМЯ: <span id="name">Руслан</span></p>
+        <p>ОТЧЕСТВО: Рашидович</p>
+        <p>ПОЛ: Муж.</p>
+        <p>ДАТА РОЖДЕНИЯ: <span id="birth">12.01.2006</span></p>
+        <p>МЕСТО РОЖДЕНИЯ: Г. Ульяновск</p>
+        <br>
+        <button onclick="convertToLatin()">Поменять по событию</button>
+    </main>
+</body>
+<script>
+    function convertToLatin() {
+        document.getElementById('surname').innerText = 'Kasymov';
+        document.getElementById('name').innerText = 'Ruslan';
+        document.getElementById('birth').innerText = '00.00.0000';
+    }
+</script>
+</html>

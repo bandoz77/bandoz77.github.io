@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сомалийские пираты - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Решение задачи 1010</h1>
+           <nav>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="consequences.html">Последствия</a></li>
+                    <li><a href="contact.html">Отзывы</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Somali_piracy" target="_blank">Википедия</a></li>
+                    <li><a href="passport.html">Паспорт</a></li>
+                    <li><a href="passportEdit.html">Паспорт2</a></li>
+                    <li><a href="solve1.html" class="active">Задача 1</a></li>
+                    <li><a href="solve2.html">Задача 2</a></li>
+            </nav>
+    </header>
+    <main>
+
+    <h3 align="center">Проверка принадлежности числа диапазону</h3>
+    <p id="task_content">Дано число X. Определить, принадлежит ли это число заданному промежутку [A, B].</p>
+    <p>Значение A: <span id="a">10</span></p>
+    <p>Значение B: <span id="b">30</span></p>
+    <p>Значение X: <span id="x">25</span></p>
+    <button id="verify">Оценить</button>
+
+    <p>Результат: <span id="result"></span></p>
+    </main>
+
+    <script>
+        function verify() {
+            // Получаем значения из элементов и преобразуем их в числа
+            const a = parseInt(document.getElementById("a").innerText);
+            const b = parseInt(document.getElementById("b").innerText);
+            const x = parseInt(document.getElementById("x").innerText);
+
+            // Определяем нижнюю и верхнюю границы диапазона
+            const low = Math.min(a, b);
+            const high = Math.max(a, b);
+
+            // Проверяем, принадлежит ли x диапазону [low, high]
+            const result = (x >= low && x <= high)
+                ? "X принадлежит заданному диапазону"
+                : "X не принадлежит заданному диапазону";
+
+            // Отображаем результат
+            document.getElementById("result").innerText = result;
+        }
+
+        // Добавляем обработчик событий для кнопки
+        document.getElementById("verify").addEventListener("click", verify);
+    </script>
+</body>
+</html>

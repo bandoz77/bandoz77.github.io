@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы о сомалийских пиратов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Обратная связь</h1>
+                  <nav>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="consequences.html">Последствия</a></li>
+                    <li><a href="contact.html"  class="active">Отзывы</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Somali_piracy" target="_blank">Википедия</a></li>
+                    <li><a href="passport.html">Паспорт</a></li>
+                    <li><a href="passportEdit.html">Паспорт2</a></li>
+                    <li><a href="solve1.html">Задача 1</a></li>
+                    <li><a href="solve2.html">Задача 2</a></li>
+            </nav>
+    </header>
+    <main>
+      <h2 align="center">Свяжитесь с нами!</h2>
+    <form action="http://example.com/" method="post">
+        <label>Фамилия:</label>
+        <input type="text" name="surname" required><br>
+
+        <label>Имя:</label>
+        <input type="text" name="name" required><br>
+
+        <label>Группа:</label>
+        <input type="text" name="group" required><br>
+
+        <label>Телефон:</label>
+        <input type="tel" name="phone" required><br>
+
+        <label>Электронная почта:</label>
+        <input type="email" name="email" required><br>
+
+        <label>Дата:</label>
+        <input type="date" name="date" required><br>
+
+        <input type="hidden" name="page" value="contact.html">
+        <button type="submit">Отправить</button>
+      </form>
+
+        <h2 align="center">Оставьте отзыв о работе сайта</h2>
+    <form action="https://www.bing.com/search?" id="FeedbackForm" name="FeedbackForm" target="_blank">
+
+        <!-- Поле с поисковым значением по умолчанию -->
+        <p>Поисковый запрос: <input type="hidden" name="q" value="feedback"></p>
+
+        <!-- Текстовое поле для комментария -->
+        <p>Комментарий: <input type="text" name="feedback_text" size="50" value="Ваш отзыв"></p>
+
+        <!-- Числовое поле для оценки -->
+        <p>Оценка сайта (от 1 до 10): <input type="number" name="rating" min="1" max="10" value="5"></p>
+
+        <!-- Радиокнопки для выбора рекомендации -->
+        <p>Рекомендовали бы вы наш сайт?<br>
+            <input type="radio" name="recommendation" value="yes" checked> Да
+            <input type="radio" name="recommendation" value="no"> Нет
+        </p>
+
+        <!-- Чекбокс для подтверждения согласия -->
+        <p>Согласие на обработку данных:
+            <input type="checkbox" name="terms_agreement" value="agree" checked> Подтверждаю
+        </p>
+
+        <!-- Поле выбора даты посещения -->
+        <p>Дата посещения сайта: <input type="date" name="visit_date" value="2024-10-02"></p>
+
+        <!-- Поле для ввода пароля -->
+        <p>Пароль для отзыва: <input type="password" name="feedback_password" size="20" value="12345"></p>
+
+        <!-- Скрытые поля для параметров запроса -->
+        <input type="hidden" name="page" value="feedback.html">
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
+
+        <!-- Кнопки обновления и отправки формы -->
+        <p>
+            <input type="reset" name="Reset" value="Обновить">
+            <input type="submit" name="submit" value="Отправить">
+        </p>
+    </form>
+    </main>
+    <footer>
+    <div style="text-align: center;">
+        <a href="https://t.me/bandoz77" target="_blank">
+            <img src="pictures/tg_icon.png" alt="Telegram" style="width: 50px; height: 50px;">
+        </a>
+    </div>
+    <p style="text-align: center;">© 2024 Сомалийские пираты. Все права защищены.</p>
+</footer>
+</body>
+</html>

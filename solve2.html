@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сомалийские пираты - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Решение задачи 1010</h1>
+           <nav>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="history.html">История</a></li>
+                    <li><a href="consequences.html">Последствия</a></li>
+                    <li><a href="contact.html">Отзывы</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Somali_piracy" target="_blank">Википедия</a></li>
+                    <li><a href="passport.html">Паспорт</a></li>
+                    <li><a href="passportEdit.html">Паспорт2</a></li>
+                    <li><a href="solve1.html">Задача 1</a></li>
+                    <li><a href="solve2.html" class="active">Задача 2</a></li>
+            </nav>
+    </header>
+    <main>
+    <h3 align="center">Проверка принадлежности числа диапазону</h3>
+    <p name="formulation">Дано число X. Определить, принадлежит ли это число заданному промежутку [A, B].</p>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+            <li>Для поисковика: <input name="q" value="search"></li>
+            <li>a: <input id="a" name="a" type="number" value="10"></li>
+            <li>b: <input id="b" name="b" type="number" value="20"></li>
+            <li>x: <input id="c" name="c" type="number" value="19"></li>
+            <li>Результат решения задачи: <input id="result" name="result" value="не определен"></li>
+            <li>Действие 1: <input id="verify" type="button" value="Проверить"></li>
+            <li>Действие 2: <input id="send" type="button" value="Отправить"></li>
+        </ul>
+    </form>
+    </main>
+
+    <script>
+        let check = false;
+
+        function verify() {
+            // Получаем значения a, b и c из полей формы
+            const a = parseInt(document.getElementById("a").value);
+            const b = parseInt(document.getElementById("b").value);
+            const c = parseInt(document.getElementById("c").value);
+
+            // Определяем нижнюю и верхнюю границы диапазона
+            const low = Math.min(a, b);
+            const high = Math.max(a, b);
+
+            // Проверяем, принадлежит ли c диапазону [low, high]
+            let result;
+            if (c >= low && c <= high) {
+                result = "C принадлежит заданному диапазону";
+                check = true;
+            } else {
+                result = "C не принадлежит заданному диапазону";
+                check = false;
+            }
+            // Записываем результат в поле "Результат решения задачи"
+            document.getElementById("result").value = result;
+        }
+
+        function send() {
+            if (check) {
+                document.getElementById("UserEnter").submit();
+            } else {
+                alert("Число C не принадлежит диапазону. Проверьте значения.");
+            }
+        }
+
+        // Назначаем обработчики событий для кнопок
+        document.getElementById("verify").addEventListener('click', verify);
+        document.getElementById("send").addEventListener('click', send);
+    </script>
+</body>
+</html>

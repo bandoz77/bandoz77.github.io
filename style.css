@@ -1,0 +1,68 @@
+header {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+h1 {
+    color: white;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav a.active {
+    font-weight: bold;
+    color: red; 
+    border-bottom: 2px solid red;
+}
+nav a:hover {
+    color: #ff6347; /* Цвет текста при наведении */
+    text-decoration: underline;
+}
+header h1, nav a {
+    font-family: Courier New ; /* Новый шрифт для заголовков */
+}
+main {
+    margin: 20px; /* Внешние отступы от краев экрана */
+    padding: 20px; /* Внутренние отступы для отступа текста от границ main */
+    background-color: #f9f9f9; /* Цвет фона для основного текста (по желанию) */
+    border-radius: 10px; /* Закругление углов для стиля */
+}
+main nav a {
+    color: black; /* Цвет текста для ссылок в меню перехода между разделами */
+}
+main nav li {
+    display: block; /* Меняем на блочный элемент для вертикального расположения */
+    margin-bottom: 10px; /* Отступ между пунктами меню */
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    font-family: Courier New ;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin-right: 3%;
+}
+h2 {
+    color: #333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
